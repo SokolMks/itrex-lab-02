@@ -1,0 +1,888 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/poppins/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Regular.woff2") format("woff2"), url("../fonts/poppins/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/* :focus, :active {
+  outline: none;
+}
+a:focus, a:active {
+  outline: none;
+} */
+nav,
+footer,
+header,
+aside {
+  display: block; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input,
+button,
+textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none; }
+
+ul,
+li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0); }
+
+.visually-hidden {
+  display: none; }
+
+.section {
+  display: flex;
+  position: relative; }
+  .section-container {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1; }
+  .section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .section-restore-password {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: var(--primary-text-color); }
+  .section-message {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    color: #f6657f;
+    letter-spacing: -0.24px; }
+    .section-message-confirm {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: var(--secondary-text-color); }
+    .section-message-email {
+      text-decoration-line: underline;
+      color: var(--secondary-background-color); }
+  .section-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center; }
+    .section-button-forgot {
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 130%;
+      text-decoration-line: underline;
+      color: var(--secondary-background-color); }
+  .section-text {
+    display: flex; }
+    .section-text-reminder {
+      color: var(--secondary-text-color); }
+    .section-text-link {
+      text-decoration-line: underline;
+      color: var(--secondary-background-color); }
+  .section .wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-background-color);
+    z-index: 2; }
+  .section .form-title {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text-color); }
+  .section .form-submit-btn {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--secondary-background-color);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    border: transparent; }
+  .section .form-submit-icon {
+    fill: currentColor; }
+  .section .input-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+    background: var(--white-color); }
+    .section .input-wrapper:hover .section .input-wrapper:focus {
+      border: 1px solid var(--secondary-background-color); }
+  .section .input-field {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-text-color); }
+    .section .input-field:focus {
+      outline: none; }
+
+.input-icon {
+  fill: var(--secondary-text-color);
+  position: absolute; }
+
+.second,
+.second-confirm {
+  display: none; }
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
+  .section-container {
+    background-image: url("../images/phone/bg-phone@2x.jpg"); } }
+@media screen and (min-width: 768px) {
+  .section-container {
+    background-image: url("../images/tablet/bg-tablet.jpg"); } }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .section-container {
+    background-image: url("../images/tablet/bg-tablet@2x.jpg"); } }
+@media screen and (min-width: 1200px) {
+  .section-container {
+    background-image: url("../images/pc/bg-pc.jpg"); } }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .section-container {
+    background-image: url("../images/pc/bg-pc@2x.jpg"); } }
+.doctor-view {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--doctor-page-background); }
+
+.doctor-account {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .doctor-account-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: transparent; }
+  .doctor-account-user {
+    display: flex;
+    flex-direction: row; }
+    .doctor-account-user-name {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%;
+      color: var(--primary-text-color); }
+  .doctor-account-page-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%; }
+  .doctor-account-patients {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .doctor-account-patients-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+  .doctor-account-search-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px; }
+
+.doctor-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: var(--wrapper-background);
+  overflow-y: scroll; }
+  .doctor-wrapper-patients-list {
+    display: flex; }
+    .doctor-wrapper-patients-list-patient {
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      background-color: #ffffff; }
+  .doctor-wrapper-patients-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px; }
+
+.doctor-pages {
+  display: flex; }
+.doctor-page {
+  background-color: #ffffff;
+  color: var(--secondary-background-color);
+  border-radius: 8px; }
+  .doctor-page-active {
+    background-color: var(--secondary-background-color);
+    color: #ffffff; }
+
+.form-search input,
+.form-search select {
+  display: none; }
+
+.patients-empty-message {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--secondary-text-color); }
+
+.patient-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: solid 1px var(--border-color); }
+  .patient-header-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px; }
+.patient-name {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 130%;
+  color: var(--primary-text-color); }
+.patient-appointment {
+  display: flex; }
+  .patient-appointment-indicator {
+    margin-right: 8px;
+    margin-top: 3px; }
+    .patient-appointment-indicator-confirmed {
+      fill: var(--appointment-confirmed); }
+    .patient-appointment-indicator-canceled {
+      fill: var(--appointment-canceled); }
+    .patient-appointment-indicator-pending {
+      fill: var(--appointment-pending); }
+  .patient-appointment-status {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 130%;
+    color: var(--secondary-text-color); }
+  .patient-appointment-details {
+    display: flex; }
+    .patient-appointment-details-date {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%;
+      color: var(--primary-text-color); }
+    .patient-appointment-details-message {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 140%;
+      color: var(--primary-text-color); }
+    .patient-appointment-details-icon {
+      margin-left: 2px;
+      margin-top: 2px; }
+.patient-manage {
+  background-color: transparent; }
+
+:root {
+  --primary-text-color: #202225;
+  --secondary-text-color: #a1abc9;
+  --primary-background-color: #f9faff;
+  --secondary-background-color: #7297ff;
+  --border-color: #dce0ec;
+  --white-color: #ffffff;
+  --error-color: #f6657f;
+  --doctor-page-background: #e3ebff;
+  --wrapper-background: #f9faff;
+  --appointment-confirmed: #34c197;
+  --appointment-pending: #7297ff;
+  --appointment-canceled: #ff2567; }
+
+@media (max-width: 767px) {
+  .section {
+    flex-direction: column; }
+    .section-container {
+      background-image: url("../images/phone/bg-phone.jpg"); }
+    .section-form {
+      margin-bottom: 72px; }
+    .section-restore-password {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      flex-direction: row;
+      width: 256px;
+      margin-bottom: 24px; }
+    .section-message {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 120%;
+      align-items: center;
+      justify-content: center; }
+    .section-button-forgot {
+      margin-bottom: 97px; }
+    .section-text {
+      flex-direction: column;
+      align-self: flex-start;
+      width: 256px; }
+      .section-text-reminder {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 140%; }
+      .section-text-link {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 130%; }
+
+  .wrapper {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 20%; }
+    .wrapper-sign-up {
+      padding: 32px 32px 44px 32px; }
+    .wrapper-sign-in {
+      padding: 32px 32px 48px 32px; }
+    .wrapper-restore-password {
+      padding: 32px 32px 279px 32px; }
+    .wrapper-restore-confirm {
+      padding: 32px 32px 404px 32px; }
+
+  .form-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    width: 256px;
+    margin-bottom: 24px; }
+  .form-submit {
+    width: 256px; }
+    .form-submit-btn {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%; }
+
+  .input-wrapper {
+    width: 256px;
+    height: 40px;
+    padding: 9.5px 0 9.5px 48px; }
+  .input-field {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%; }
+  .input-name {
+    margin-bottom: 24px; }
+
+  .password {
+    margin-bottom: 16px; }
+
+  .confirmation {
+    margin-bottom: 32px; }
+
+  .sign-in {
+    margin-bottom: 32px; }
+
+  .restore-title {
+    margin-left: 16px; }
+
+  .error {
+    width: 254px;
+    height: 32px; }
+
+  .input-icon {
+    left: 18px; }
+
+  .display-password {
+    left: 218px;
+    top: 8px; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    flex-direction: row; }
+    .section-container {
+      display: flex;
+      flex-direction: row-reverse; }
+    .section-form {
+      margin-bottom: 120px; }
+    .section-restore-password {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      flex-direction: row;
+      width: 368px;
+      margin-bottom: 32px; }
+    .section-message {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 120%;
+      width: 368px;
+      margin-bottom: 40px; }
+      .section-message-confirm {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 130%; }
+    .section-button-forgot {
+      margin-bottom: 257px; }
+    .section-text {
+      flex-direction: row;
+      align-self: flex-start;
+      width: 368px; }
+      .section-text-reminder {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        margin-right: 12px; }
+      .section-text-link {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 130%; }
+
+  .wrapper {
+    width: 560px; }
+    .wrapper-sign-up {
+      padding: 168px 96px 80px 96px; }
+    .wrapper-sign-in {
+      padding: 264px 96px 80px 96px; }
+    .wrapper-restore-password {
+      padding: 264px 96px 442px 96px; }
+    .wrapper-restore-confirm {
+      padding: 264px 96px 639pxh 96px; }
+
+  .form-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    width: 368px;
+    margin-bottom: 40px; }
+  .form-submit {
+    width: 368px; }
+    .form-submit-btn {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%; }
+
+  .input-wrapper {
+    gap: 16px;
+    width: 368px;
+    height: 56px;
+    padding: 16px 0 16px 64px; }
+  .input-field {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%; }
+  .input-name {
+    margin-bottom: 40px; }
+
+  .password {
+    margin-bottom: 8px; }
+
+  .confirmation {
+    margin-bottom: 64px; }
+
+  .sign-in {
+    margin-bottom: 32px; }
+
+  .restore-title {
+    margin-left: 16px; }
+
+  .error {
+    margin-top: 8px; }
+
+  .input-icon {
+    left: 24px; }
+
+  .display-password {
+    left: 320px; } }
+@media (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%; }
+    .section-container {
+      display: flex;
+      flex-direction: row-reverse; }
+    .section-form {
+      margin-bottom: 120px; }
+    .section-restore-password {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      align-self: center;
+      flex-direction: row;
+      width: 368px;
+      color: var(--primary-text-color);
+      margin-bottom: 32px; }
+    .section-message {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 120%;
+      width: 368px;
+      justify-self: flex-start;
+      margin-bottom: 40px; }
+    .section-button-forgot {
+      margin-bottom: 257px; }
+    .section-text {
+      flex-direction: row;
+      align-self: flex-start;
+      width: 368px; }
+      .section-text-reminder {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        margin-right: 12px; }
+      .section-text-link {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 130%; }
+
+  .wrapper {
+    width: 560px; }
+    .wrapper-sign-up {
+      padding: 168px 96px 80px 96px; }
+    .wrapper-sign-in {
+      padding: 264px 96px 80px 96px; }
+    .wrapper-restore-password {
+      padding: 264px 96px 442px 96px; }
+    .wrapper-restore-confirm {
+      padding: 264px 96px 639px 96px; }
+
+  .form-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    align-self: flex-start;
+    align-self: center;
+    width: 368px;
+    margin-bottom: 40px; }
+  .form-submit {
+    width: 368px;
+    align-self: center; }
+    .form-submit-btn {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%; }
+
+  .input-wrapper {
+    width: 368px;
+    height: 56px;
+    padding: 16px 0 16px 64px; }
+  .input-field {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%; }
+  .input-name {
+    margin-bottom: 40px; }
+
+  .password {
+    margin-bottom: 8px; }
+
+  .confirmation {
+    margin-bottom: 64px; }
+
+  .sign-in {
+    margin-bottom: 32px; }
+
+  .restore-title {
+    margin-left: 16px; }
+
+  .error {
+    margin-top: 8px; }
+
+  .input-icon {
+    left: 24px; }
+
+  .display-password {
+    left: 320px;
+    top: 16px; } }
+@media (max-width: 767px) {
+  .doctor-account-header {
+    padding: 16px 24px 16px 24px; }
+  .doctor-account-user {
+    margin-left: 100px; }
+    .doctor-account-user-description {
+      display: none; }
+  .doctor-account-page-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; }
+  .doctor-account-patients {
+    gap: 16px; }
+    .doctor-account-patients-empty {
+      gap: 72px; }
+    .doctor-account-patients-list {
+      align-self: center;
+      width: 85%; }
+
+  .doctor-wrapper {
+    width: 100%;
+    height: 90%;
+    gap: 40px;
+    padding: 40px 24px; }
+    .doctor-wrapper-patients-list {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap; }
+      .doctor-wrapper-patients-list-patient {
+        gap: 16px;
+        padding: 16px 24px 0px 24px;
+        width: 272px; }
+        .doctor-wrapper-patients-list-patient:not(:last-child) {
+          margin-bottom: 24px; }
+
+  .doctor-pages {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px; }
+  .doctor-page {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px; }
+    .doctor-page-active {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%; }
+
+  .patient-header {
+    justify-content: space-between;
+    padding-bottom: 16px; }
+  .patient-appointment-details:not(:last-child) {
+    margin-bottom: 23px; }
+  .patient-appointment-details-date {
+    margin-left: 18px; }
+  .patient-appointment-details-message {
+    margin-left: 20px;
+    margin-bottom: 24px; } }
+@media (min-width: 768px) and (max-width: 1919px) {
+  .doctor-account {
+    align-items: center; }
+    .doctor-account-header {
+      width: 640px;
+      padding: 24px 0; }
+    .doctor-account-user-description {
+      margin-right: 16px; }
+    .doctor-account-user-name {
+      display: block; }
+    .doctor-account-user-position {
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 130%;
+      color: var(--secondary-text-color);
+      display: block;
+      text-align: end; }
+    .doctor-account-patients {
+      gap: 42px; }
+      .doctor-account-patients-list {
+        width: 544px; }
+
+  .doctor-wrapper {
+    width: 640px;
+    height: 896px;
+    gap: 56px;
+    padding: 40px 48px; }
+    .doctor-wrapper-patients-list {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 20px 20px; }
+      .doctor-wrapper-patients-list-patient {
+        padding: 32px 34px;
+        width: 544px; }
+    .doctor-wrapper-patients-empty {
+      margin-top: 124px; }
+
+  .doctor-pages {
+    gap: 12px; }
+  .doctor-page {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    width: 160px;
+    height: 40px; }
+    .doctor-page-active {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 130%; }
+
+  .patient-header {
+    padding-bottom: 24px; }
+    .patient-header-info {
+      margin-right: 174px; }
+  .patient-appointment-details {
+    margin-top: 24px; }
+    .patient-appointment-details:not(:last-child) {
+      margin-bottom: 16px; }
+    .patient-appointment-details-date {
+      margin-left: 16px; }
+    .patient-appointment-details-message {
+      margin-left: 16px; } }
+@media (min-width: 1023px) and (max-width: 1919px) {
+  .doctor-wrapper {
+    height: 1200px; }
+    .doctor-wrapper-patients-empty {
+      margin-top: 300px; } }
+@media (min-width: 1919px) {
+  .doctor-account {
+    align-items: center; }
+    .doctor-account-header {
+      width: 1792px;
+      padding: 24px 0; }
+    .doctor-account-user {
+      gap: 16px; }
+      .doctor-account-user-name {
+        display: block; }
+      .doctor-account-user-position {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 130%;
+        color: var(--secondary-text-color);
+        display: block;
+        text-align: end; }
+    .doctor-account-patients {
+      gap: 32px; }
+      .doctor-account-patients-list {
+        width: 1680px; }
+
+  .doctor-wrapper {
+    width: 1792px;
+    height: 896px;
+    gap: 56px;
+    padding: 40px 22px 0 48px; }
+    .doctor-wrapper-patients-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-self: flex-start;
+      gap: 20px 24px; }
+      .doctor-wrapper-patients-list-patient {
+        gap: 24px;
+        padding: 24px 32px 40px 32px;
+        width: 406px; }
+    .doctor-wrapper-patients-empty {
+      margin-top: 124px; }
+
+  .doctor-pages {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px; }
+  .doctor-page {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    width: 160px;
+    height: 40px; }
+    .doctor-page-active {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 140%; }
+
+  .patient-header {
+    padding-bottom: 24px; }
+    .patient-header-info {
+      margin-right: 27px; }
+  .patient-appointment-details:not(:last-child) {
+    margin-bottom: 16px; }
+  .patient-appointment-details-date {
+    margin-left: 16px; }
+  .patient-appointment-details-message {
+    margin-left: 16px; }
+  .patient-manage {
+    margin-left: 40px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,270 @@
+@media (max-width: 767px) {
+  .doctor-account {
+    &-header {
+      padding: 16px 24px 16px 24px;
+    }
+    &-user {
+      margin-left: 100px;
+      &-description {
+        display: none;
+      }
+    }
+    &-page-title {
+      @include font(Poppins, 600, 20px, 24px);
+    }
+    &-patients {
+      gap: 16px;
+      &-empty {
+        gap: 72px;
+      }
+      &-list {
+        align-self: center;
+        width: 85%;
+      }
+    }
+  }
+  .doctor-wrapper {
+    width: 100%;
+    height: 90%;
+    gap: 40px;
+    padding: 40px 24px;
+    &-patients {
+      &-list {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        &-patient {
+          gap: 16px;
+          padding: 16px 24px 0px 24px;
+          width: 272px;
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+  .doctor {
+    &-pages {
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+    }
+    &-page {
+      @include font(Poppins, 400, 15px, 130%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 40px;
+      &-active {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+  .patient {
+    &-header {
+      justify-content: space-between;
+      padding-bottom: 16px;
+    }
+    &-appointment {
+      &-details {
+        &:not(:last-child) {
+          margin-bottom: 23px;
+        }
+        &-date {
+          margin-left: 18px;
+        }
+        &-message {
+          margin-left: 20px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1919px) {
+  .doctor-account {
+    align-items: center;
+    &-header {
+      width: 640px;
+      padding: 24px 0;
+    }
+    &-user {
+      &-description {
+        margin-right: 16px;
+      }
+      &-name {
+        display: block;
+      }
+      &-position {
+        @include font(Poppins, 500, 13px, 130%);
+        color: var(--secondary-text-color);
+        display: block;
+        text-align: end;
+      }
+    }
+    &-patients {
+      gap: 42px;
+      &-list {
+        width: 544px;
+      }
+    }
+  }
+  .doctor-wrapper {
+    width: 640px;
+    height: 896px;
+    gap: 56px;
+    padding: 40px 48px;
+    &-patients {
+      &-list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px 20px;
+        &-patient {
+          padding: 32px 34px;
+          width: 544px;
+        }
+      }
+      &-empty {
+        margin-top: 124px;
+      }
+    }
+  }
+  .doctor {
+    &-pages {
+      gap: 12px;
+    }
+    &-page {
+      @include font(Poppins, 400, 15px, 130%);
+      width: 160px;
+      height: 40px;
+      &-active {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+  .patient {
+    &-header {
+      padding-bottom: 24px;
+      &-info {
+        margin-right: 174px;
+      }
+    }
+    &-appointment {
+      &-details {
+        margin-top: 24px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        &-date {
+          margin-left: 16px;
+        }
+        &-message {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1919px) {
+  .doctor-wrapper {
+    height: 1200px;
+    &-patients-empty {
+      margin-top: 300px;
+    }
+  }
+}
+
+@media (min-width: 1919px) {
+  .doctor-account {
+    align-items: center;
+    &-header {
+      width: 1792px;
+      padding: 24px 0;
+    }
+    //look here for title doctor change
+    &-user {
+      gap: 16px;
+      &-name {
+        display: block;
+      }
+      &-position {
+        @include font(Poppins, 500, 13px, 130%);
+        color: var(--secondary-text-color);
+        display: block;
+        text-align: end;
+      }
+    }
+    &-patients {
+      gap: 32px;
+      &-list {
+        width: 1680px;
+      }
+    }
+  }
+  .doctor-wrapper {
+    width: 1792px;
+    height: 896px;
+    gap: 56px;
+    padding: 40px 22px 0 48px;
+    &-patients {
+      &-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        gap: 20px 24px;
+        &-patient {
+          gap: 24px;
+          padding: 24px 32px 40px 32px;
+          width: 406px;
+        }
+      }
+      &-empty {
+        margin-top: 124px;
+      }
+    }
+  }
+  .doctor {
+    &-pages {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+    &-page {
+      @include font(Poppins, 400, 15px, 140%);
+      width: 160px;
+      height: 40px;
+      &-active {
+        @include font(Poppins, 600, 15px, 140%);
+      }
+    }
+  }
+  .patient {
+    &-header {
+      padding-bottom: 24px;
+      &-info {
+        margin-right: 27px;
+      }
+    }
+    &-appointment {
+      &-details {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        &-date {
+          margin-left: 16px;
+        }
+        &-message {
+          margin-left: 16px;
+        }
+      }
+    }
+    &-manage {
+      margin-left: 40px;
+    }
+  }
+}

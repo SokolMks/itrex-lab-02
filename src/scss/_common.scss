@@ -1,0 +1,327 @@
+.visually-hidden {
+  display: none;
+}
+.section {
+  display: flex;
+  position: relative;
+
+  &-container {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-restore-password {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: var(--primary-text-color);
+  }
+  &-message {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    color: #f6657f;
+    letter-spacing: -0.24px;
+    &-confirm {
+      @include font(Poppins, 400, 15px, 130%);
+      color: var(--secondary-text-color);
+    }
+    &-email {
+      text-decoration-line: underline;
+      color: var(--secondary-background-color);
+    }
+  }
+  &-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    &-forgot {
+      @include font(Poppins, 500, 15px, 130%);
+      text-decoration-line: underline;
+      color: var(--secondary-background-color);
+    }
+  }
+  &-text {
+    display: flex;
+    &-reminder {
+      color: var(--secondary-text-color);
+    }
+    &-link {
+      text-decoration-line: underline;
+      color: var(--secondary-background-color);
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-background-color);
+    z-index: 2;
+  }
+
+  .form {
+    &-title {
+      display: flex;
+      align-items: center;
+      color: var(--primary-text-color);
+    }
+    &-submit {
+      &-btn {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--secondary-background-color);
+        padding: 12px 16px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        border: transparent;
+      }
+      &-icon {
+        fill: currentColor;
+      }
+    }
+  }
+
+  .input {
+    &-wrapper {
+      display: flex;
+      position: relative;
+      align-items: center;
+      border-radius: 7px;
+      border: 1px solid var(--border-color);
+      background: var(--white-color);
+      &:hover &:focus {
+        border: 1px solid var(--secondary-background-color);
+      }
+    }
+    &-field {
+      border: none;
+      background-color: transparent;
+      color: var(--secondary-text-color);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.input-icon {
+  fill: var(--secondary-text-color);
+  position: absolute;
+}
+.second,
+.second-confirm {
+  display: none;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
+  .section {
+    &-container {
+      background-image: url('../images/phone/bg-phone@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    &-container {
+      background-image: url('../images/tablet/bg-tablet.jpg');
+    }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .section {
+    &-container {
+      background-image: url('../images/tablet/bg-tablet@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    &-container {
+      background-image: url('../images/pc/bg-pc.jpg');
+    }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .section {
+    &-container {
+      background-image: url('../images/pc/bg-pc@2x.jpg');
+    }
+  }
+}
+
+//Doctors Page
+.doctor-view {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--doctor-page-background);
+}
+
+.doctor-account {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-color: transparent;
+  }
+  &-user {
+    display: flex;
+    flex-direction: row;
+    &-name {
+      @include font(Poppins, 600, 15px, 130%);
+      color: var(--primary-text-color);
+    }
+  }
+  &-page-title {
+    @include font(Poppins, 600, 24px, 110%);
+  }
+  &-patients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &-search-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+}
+
+.doctor-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: var(--wrapper-background);
+  overflow-y: scroll;
+  &-patients {
+    &-list {
+      display: flex;
+      &-patient {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
+    }
+    &-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+}
+.doctor {
+  &-pages {
+    display: flex;
+  }
+  &-page {
+    background-color: #ffffff;
+    color: var(--secondary-background-color);
+    border-radius: 8px;
+    &-active {
+      background-color: var(--secondary-background-color);
+      color: #ffffff;
+    }
+  }
+}
+.form-search {
+  & input,
+  select {
+    display: none;
+  }
+}
+.patients-empty-message {
+  @include font(Poppins, 400, 15px, 140%);
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.patient {
+  &-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: solid 1px var(--border-color);
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+    }
+  }
+  &-name {
+    @include font(Poppins, 600, 17px, 130%);
+    color: var(--primary-text-color);
+  }
+  &-appointment {
+    display: flex;
+    &-indicator {
+      margin-right: 8px;
+      margin-top: 3px;
+      &-confirmed {
+        fill: var(--appointment-confirmed);
+      }
+      &-canceled {
+        fill: var(--appointment-canceled);
+      }
+      &-pending {
+        fill: var(--appointment-pending);
+      }
+    }
+    &-status {
+      @include font(Poppins, 500, 13px, 130%);
+      color: var(--secondary-text-color);
+    }
+    &-details {
+      display: flex;
+      &-date {
+        @include font(Poppins, 600, 15px, 130%);
+        color: var(--primary-text-color);
+      }
+      &-message {
+        @include font(Poppins, 400, 15px, 140%);
+        color: var(--primary-text-color);
+      }
+      &-icon {
+        margin-left: 2px;
+        margin-top: 2px;
+      }
+    }
+  }
+  &-manage {
+    background-color: transparent;
+  }
+}

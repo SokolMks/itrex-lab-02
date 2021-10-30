@@ -1,0 +1,349 @@
+:root {
+  --primary-text-color: #202225;
+  --secondary-text-color: #a1abc9;
+  --primary-background-color: #f9faff;
+  --secondary-background-color: #7297ff;
+  --border-color: #dce0ec;
+  --white-color: #ffffff;
+  --error-color: #f6657f;
+  //doctor page
+  --doctor-page-background: #e3ebff;
+  --wrapper-background: #f9faff;
+  --appointment-confirmed: #34c197;
+  --appointment-pending: #7297ff;
+  --appointment-canceled: #ff2567;
+}
+
+@media (max-width: 767px) {
+  .section {
+    flex-direction: column;
+
+    &-container {
+      background-image: url('../images/phone/bg-phone.jpg');
+    }
+    &-form {
+      margin-bottom: 72px;
+    }
+    &-restore-password {
+      @include font(Poppins, 600, 20px, 24px);
+      flex-direction: row;
+      width: 256px;
+      margin-bottom: 24px;
+    }
+    &-message {
+      @include font(Poppins, 400, 13px, 120%);
+      align-items: center;
+      justify-content: center;
+    }
+    &-button {
+      &-forgot {
+        margin-bottom: 97px;
+      }
+    }
+    &-text {
+      flex-direction: column;
+      align-self: flex-start;
+      width: 256px;
+      &-reminder {
+        @include font(Poppins, 400, 15px, 140%);
+      }
+      &-link {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+  .wrapper {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 20%;
+    &-sign-up {
+      padding: 32px 32px 44px 32px;
+    }
+    &-sign-in {
+      padding: 32px 32px 48px 32px;
+    }
+    &-restore-password {
+      padding: 32px 32px 279px 32px;
+    }
+    &-restore-confirm {
+      padding: 32px 32px 404px 32px;
+    }
+  }
+  .form {
+    &-title {
+      @include font(Poppins, 600, 20px, 24px);
+      width: 256px;
+      margin-bottom: 24px;
+    }
+    &-submit {
+      width: 256px;
+      &-btn {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+
+  .input {
+    &-wrapper {
+      width: 256px;
+      height: 40px;
+      padding: 9.5px 0 9.5px 48px;
+    }
+    &-field {
+      @include font(Poppins, 500, 15px, 140%);
+    }
+    &-name {
+      margin-bottom: 24px;
+    }
+  }
+  .password {
+    margin-bottom: 16px;
+  }
+  .confirmation {
+    margin-bottom: 32px;
+  }
+
+  .sign-in {
+    margin-bottom: 32px;
+  }
+  .restore-title {
+    margin-left: 16px;
+  }
+  .error {
+    width: 254px;
+    height: 32px;
+  }
+  .input-icon {
+    left: 18px;
+  }
+  .display-password {
+    left: 218px;
+    top: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    flex-direction: row;
+    &-container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &-form {
+      margin-bottom: 120px;
+    }
+    &-restore-password {
+      @include font(Poppins, 600, 20px, 24px);
+      flex-direction: row;
+      width: 368px;
+      margin-bottom: 32px;
+    }
+    &-message {
+      @include font(Poppins, 400, 13px, 120%);
+      width: 368px;
+      margin-bottom: 40px;
+      &-confirm {
+        @include font(Poppins, 500, 15px, 130%);
+      }
+    }
+    &-button {
+      &-forgot {
+        margin-bottom: 257px;
+      }
+    }
+    &-text {
+      flex-direction: row;
+      align-self: flex-start;
+      width: 368px;
+      &-reminder {
+        @include font(Poppins, 500, 15px, 140%);
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+      &-link {
+        @include font(Poppins, 500, 15px, 130%);
+      }
+    }
+  }
+  .wrapper {
+    width: 560px;
+    &-sign-up {
+      padding: 168px 96px 80px 96px;
+    }
+    &-sign-in {
+      padding: 264px 96px 80px 96px;
+    }
+    &-restore-password {
+      padding: 264px 96px 442px 96px;
+    }
+    &-restore-confirm {
+      padding: 264px 96px 639pxh 96px;
+    }
+  }
+  .form {
+    &-title {
+      @include font(Poppins, 600, 24px, 24px);
+      width: 368px;
+      margin-bottom: 40px;
+    }
+    &-submit {
+      width: 368px;
+      &-btn {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+  .input {
+    &-wrapper {
+      gap: 16px;
+      width: 368px;
+      height: 56px;
+      padding: 16px 0 16px 64px;
+    }
+    &-field {
+      @include font(Poppins, 400, 17px, 140%);
+    }
+    &-name {
+      margin-bottom: 40px;
+    }
+  }
+  .password {
+    margin-bottom: 8px;
+  }
+  .confirmation {
+    margin-bottom: 64px;
+  }
+
+  .sign-in {
+    margin-bottom: 32px;
+  }
+  .restore-title {
+    margin-left: 16px;
+  }
+  .error {
+    margin-top: 8px;
+  }
+  .input-icon {
+    left: 24px;
+  }
+  .display-password {
+    left: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    &-container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &-form {
+      margin-bottom: 120px;
+    }
+    &-restore-password {
+      @include font(Poppins, 600, 20px, 24px);
+      align-self: center;
+      flex-direction: row;
+      width: 368px;
+      color: var(--primary-text-color);
+      margin-bottom: 32px;
+    }
+    &-message {
+      @include font(Poppins, 400, 13px, 120%);
+      width: 368px;
+      justify-self: flex-start;
+      margin-bottom: 40px;
+    }
+    &-button {
+      &-forgot {
+        margin-bottom: 257px;
+      }
+    }
+    &-text {
+      flex-direction: row;
+      align-self: flex-start;
+      width: 368px;
+      &-reminder {
+        @include font(Poppins, 400, 15px, 140%);
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+      &-link {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+  .wrapper {
+    width: 560px;
+    &-sign-up {
+      padding: 168px 96px 80px 96px;
+    }
+    &-sign-in {
+      padding: 264px 96px 80px 96px;
+    }
+    &-restore-password {
+      padding: 264px 96px 442px 96px;
+    }
+    &-restore-confirm {
+      padding: 264px 96px 639px 96px;
+    }
+  }
+  .form {
+    &-title {
+      @include font(Poppins, 600, 24px, 24px);
+      align-self: flex-start;
+      align-self: center;
+      width: 368px;
+      margin-bottom: 40px;
+    }
+    &-submit {
+      width: 368px;
+      align-self: center;
+      &-btn {
+        @include font(Poppins, 600, 15px, 130%);
+      }
+    }
+  }
+
+  .input {
+    &-wrapper {
+      width: 368px;
+      height: 56px;
+      padding: 16px 0 16px 64px;
+    }
+    &-field {
+      @include font(Poppins, 400, 17px, 140%);
+    }
+    &-name {
+      margin-bottom: 40px;
+    }
+  }
+  .password {
+    margin-bottom: 8px;
+  }
+  .confirmation {
+    margin-bottom: 64px;
+  }
+
+  .sign-in {
+    margin-bottom: 32px;
+  }
+  .restore-title {
+    margin-left: 16px;
+  }
+  .error {
+    margin-top: 8px;
+  }
+  .input-icon {
+    left: 24px;
+  }
+  .display-password {
+    left: 320px;
+    top: 16px;
+  }
+}
