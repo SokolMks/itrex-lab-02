@@ -1,6 +1,6 @@
 
 //CHANGE ICON EYE
-const changeIcon = document.querySelector("[data-password-button");
+const changeIcon = document.querySelector("[data-password-button]");
 const showPassword = document.querySelector(".first");
 const hidePassword = document.querySelector(".second");
 const showPasswordConfirm = document.querySelector(".first-confirm");
